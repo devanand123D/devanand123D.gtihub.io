@@ -1,0 +1,24 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+  <title>Firebasepushnotification</title>
+  <base href="https://devanand123D.github.io/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="manifest" href="./manifest.json">
+<script>
+  if ('serviceWorker' in navigator) {
+navigator.serviceWorker.register('../firebase-messaging-sw.js')
+  .then(function(registration) {
+    for(let registrations of registration) {     console.log('Registration successful, scope is:', registrations.scope); registrations.unregister() }
+    console.log('Registration successful, scope is:', registration.scope);
+  }).catch(function(err) {
+    console.log('Service worker registration failed, error:', err);
+  });
+}
+</script> 
+<link rel="stylesheet" href="styles.ef46db3751d8e999.css"></head>
+<body>
+  <app-root></app-root>
+<script src="runtime.8419cbed255c27dc.js" type="module"></script><script src="polyfills.42aeae56cc9f6783.js" type="module"></script><script src="main.2b0f242ee03a8b1a.js" type="module"></script>
+
+</body></html>
